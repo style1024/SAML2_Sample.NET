@@ -34,7 +34,7 @@ namespace SampleSP.NET.Web.Controllers
         [HttpGet("Login")]
         public IActionResult Entrypoint(string returnUrl)
         {
-            // 創建重定向綁定並設置重定向狀態
+            // 創建重定向綁定並設置重定向狀態123213
             var binding = new Saml2RedirectBinding();
             binding.SetRelayStateQuery(new Dictionary<string, string>() {
                 { RELAY_STATE_RETURN_URL, returnUrl ?? Url.Content("~/Home") }
