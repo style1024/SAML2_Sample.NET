@@ -84,6 +84,3 @@ dotnet add package ITfoxtec.Identity.Saml2.MvcCore --version 4.7.0
 
 1. 裡面會提供需鑰填寫到我們appsetting.json裏頭的資訊，依序填入到SingleSignOnDestination、SingleLogoutDestination、AllowedIssuer、IdPCertificate  
     ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/69268f98-3af1-47a6-8f91-e78a1346cf57)
-
-       
-> 接下來就是程式的部分了，可以依照需求去更動
