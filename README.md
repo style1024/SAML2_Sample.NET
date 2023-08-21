@@ -1,4 +1,4 @@
-# samlsp-dotnet-backend
+![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/64d0ca16-ab19-4cae-ba17-85d5533ec581)# samlsp-dotnet-backend
 > SAML service provider demonstrate in .NET
 
 * Downoload .NET [here](https://dotnet.microsoft.com/download/dotnet/5.0)
@@ -56,28 +56,25 @@ dotnet add package ITfoxtec.Identity.Saml2.MvcCore --version 4.7.0
    ![image](https://miro.medium.com/v2/resize:fit:1400/0*DVvx5O3nMBChrbOJ)  
    
 1. App name 為你應用程式的名字，可自行命名，縮圖則可不上傳  
-   ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/40da3be6-c551-43c9-bf9e-60305782ff47)  
-   
+   ![image](https://miro.medium.com/v2/resize:fit:1400/0*x9jBOnVddmnKf6tl)
+  
 1. 提供關於你 Service Provider 的 Information，這邊先設定SSO  
-   ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/14e0fc3b-68a1-410f-95db-f0bb1dfc0598)  
-   
+  ![image](https://miro.medium.com/v2/resize:fit:1400/0*FRoCzbtdyBYrxumi)
+
 1. 往下拉一點會看到 Show Advanced Settings ，點開後可以開始設定證書和SLO  
-   ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/0e30ee2b-98cd-4365-a6c5-faa2eaef9cbf)  
-   
-   成功上傳  
-   ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/6a63bd17-e8b5-4cae-8808-7e271d84d3e6)  
+   ![image](https://miro.medium.com/v2/resize:fit:1400/0*St0lsgWbqmdYRv_d)  
    
 1. 成功上傳後就可以勾選 Enable Single Logout，就可以設定SLO。都設定好後就可以點選最下方的Next  
-   ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/c74cdb59-b4b2-4aba-a524-a2d7de5ef6a7)  
+   ![image](https://i.imgur.com/Nk7g4Ta.png)  
    
 > 如果需要回傳其他資料可以在這邊這設定，這邊以displayName當作回傳參數回傳 user.displayName 給我們的endpoint  
-    ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/843f2030-ee3e-4cb1-9f18-05b56b9d66c7)  
+    ![image](https://i.imgur.com/dR8yBT9.png)  
 
 1. 點選 I'm a software vendor. I'd like to integrate my app with Okta，完成後點選Finish  
-    ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/7e01f703-0027-40cb-8df0-79cb5c2792ab)  
+    ![image](https://i.imgur.com/4EnacBi.png)  
 
 1. 完成後，點選右邊的 View SAML setup instructions  
-    ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/20bf8a1d-71b1-4114-a4d9-d570804f5c61)  
+    ![image](https://i.imgur.com/tENLJ0w.png)  
 
 1. 裡面會提供需鑰填寫到我們appsetting.json裏頭的資訊，依序填入到SingleSignOnDestination、SingleLogoutDestination、AllowedIssuer、IdPCertificate  
-    ![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/69268f98-3af1-47a6-8f91-e78a1346cf57)
+    ![image](https://i.imgur.com/fRXMLm5.png)
