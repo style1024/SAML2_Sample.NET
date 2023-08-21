@@ -34,13 +34,13 @@ namespace SampleSP.NET.Web.Controllers
         [HttpGet("Login")]
         public IActionResult Entrypoint(string returnUrl)
         {
-            // ³Ğ«Ø­«©w¦V¸j©w¨Ã³]¸m­«©w¦Vª¬ºA123213
+            // å‰µå»ºé‡å®šå‘ç¶å®šä¸¦è¨­ç½®é‡å®šå‘ç‹€æ…‹
             var binding = new Saml2RedirectBinding();
             binding.SetRelayStateQuery(new Dictionary<string, string>() {
                 { RELAY_STATE_RETURN_URL, returnUrl ?? Url.Content("~/Home") }
             });
 
-            // ³Ğ«ØSAML2¨­¥÷ÅçÃÒ½Ğ¨D¨Ã¸j©w
+            // å‰µå»ºSAML2èº«ä»½é©—è­‰è«‹æ±‚ä¸¦ç¶å®š
             return binding.Bind(new Saml2AuthnRequest(_config)
             {
                 NameIdPolicy = new NameIdPolicy { AllowCreate = false, Format = "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress" }
@@ -86,25 +86,24 @@ namespace SampleSP.NET.Web.Controllers
         [HttpPost("assertion-consumer-service")]
         public async Task<IActionResult> AssertionConsumerService()
         {
-            // Åª¨úSAML2¨­¥÷ÅçÃÒÅTÀ³
+            // è®€å–SAML2èº«ä»½é©—è­‰éŸ¿æ‡‰
             var binding = new Saml2PostBinding();
             var authResponse = new Saml2AuthnResponse(_config);
 
-            // Allow issuer : default ? 
             binding.ReadSamlResponse(Request.ToGenericHttpRequest(), authResponse);
             if (authResponse.Status != Saml2StatusCodes.Success)
             {
-                // ¦pªG¨­¥÷ÅçÃÒ¥¼¦¨¥\¡A«h©ß¥X²§±`
+                // å¦‚æœèº«ä»½é©—è­‰æœªæˆåŠŸï¼Œå‰‡æ‹‹å‡ºç•°å¸¸
                 throw new AuthenticationException($"SAML Response status: {authResponse.Status}");
             }
             binding.Unbind(Request.ToGenericHttpRequest(), authResponse);
 
-            // ³Ğ«Ø·|¸Ü¨Ã­«©w¦V
+            // å‰µå»ºæœƒè©±ä¸¦é‡å®šå‘
             await authResponse.CreateSession(HttpContext, claimsTransform: (claimsPrincipal) => ClaimsTransform.Transform(claimsPrincipal));
             return Redirect(extractRelayState(binding));
         }
 
-        // ´£¨ú­«©w¦Vª¬ºA
+        // æå–é‡å®šå‘ç‹€æ…‹
         private string extractRelayState(Saml2PostBinding binding)
         {
             var relayState = binding.GetRelayStateQuery();
