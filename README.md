@@ -52,29 +52,29 @@ dotnet add package ITfoxtec.Identity.Saml2.MvcCore --version 4.7.0
 ### 1. 先申請OKTA帳戶和完成帳戶驗證後登入，點選左邊功能列的 Applications > Applications > Create App Integration
    ![image](https://miro.medium.com/v2/resize:fit:1400/0*SsFHqDYhxpECfwCc)
    
-1. 選擇 SAML2.0，點選 Next
+### 1. 選擇 SAML2.0，點選 Next
    ![image](https://miro.medium.com/v2/resize:fit:1400/0*DVvx5O3nMBChrbOJ)  
    
-1. App name 為你應用程式的名字，可自行命名，縮圖則可不上傳  
+### 1. App name 為你應用程式的名字，可自行命名，縮圖則可不上傳  
    ![image](https://miro.medium.com/v2/resize:fit:1400/0*x9jBOnVddmnKf6tl)
   
-1. 提供關於你 Service Provider 的 Information，這邊先設定SSO  
+### 1. 提供關於你 Service Provider 的 Information，這邊先設定SSO  
   ![image](https://miro.medium.com/v2/resize:fit:1400/0*FRoCzbtdyBYrxumi)
 
-1. 往下拉一點會看到 Show Advanced Settings ，點開後可以開始設定證書和SLO  
+### 1. 往下拉一點會看到 Show Advanced Settings ，點開後可以開始設定證書和SLO  
    ![image](https://miro.medium.com/v2/resize:fit:1400/0*St0lsgWbqmdYRv_d)  
    
-1. 成功上傳後就可以勾選 Enable Single Logout，就可以設定SLO。都設定好後就可以點選最下方的Next  
+### 1. 成功上傳後就可以勾選 Enable Single Logout，就可以設定SLO。都設定好後就可以點選最下方的Next  
    ![image](https://i.imgur.com/Nk7g4Ta.png)  
    
-> 如果需要回傳其他資料可以在這邊這設定，這邊以displayName當作回傳參數回傳 user.displayName 給我們的endpoint  
+### > 如果需要回傳其他資料可以在這邊這設定，這邊以displayName當作回傳參數回傳 user.displayName 給我們的endpoint  
     ![image](https://i.imgur.com/dR8yBT9.png)  
 
-1. 點選 I'm a software vendor. I'd like to integrate my app with Okta，完成後點選Finish  
+### 1. 點選 I'm a software vendor. I'd like to integrate my app with Okta，完成後點選Finish  
     ![image](https://i.imgur.com/4EnacBi.png)  
 
-1. 完成後，點選右邊的 View SAML setup instructions  
+### 1. 完成後，點選右邊的 View SAML setup instructions  
     ![image](https://i.imgur.com/tENLJ0w.png)  
 
-1. 裡面會提供需鑰填寫到我們appsetting.json裏頭的資訊，依序填入到SingleSignOnDestination、SingleLogoutDestination、AllowedIssuer、IdPCertificate  
+### 1. 裡面會提供需鑰填寫到我們appsetting.json裏頭的資訊，依序填入到SingleSignOnDestination、SingleLogoutDestination、AllowedIssuer、IdPCertificate  
     ![image](https://i.imgur.com/fRXMLm5.png)
