@@ -1,4 +1,3 @@
-![image](https://github.com/style1024/SAML2_Sample.NET/assets/52558393/64d0ca16-ab19-4cae-ba17-85d5533ec581)# samlsp-dotnet-backend
 > SAML service provider demonstrate in .NET
 
 * Downoload .NET [here](https://dotnet.microsoft.com/download/dotnet/5.0)
