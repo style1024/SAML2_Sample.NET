@@ -49,7 +49,7 @@ dotnet add package ITfoxtec.Identity.Saml2.MvcCore --version 4.7.0
   
 > 其他的Idp平台也可以做到跟OKTA同樣的功能，出於方便和較多討論度的關係，所以這邊使用OKTA做示範，下面會提到該提供的訊息基本上其他Idp也會要求我們提供。  
 
-### 1. 先申請OKTA帳戶和完成帳戶驗證後登入，點選左邊功能列的 Applications > Applications > Create App Integration
+### 1. 先申請OKTA帳戶和完成帳戶驗證後登入，點選左邊功能列的 Applications > Applications > Create App Integration...
   ![image](https://miro.medium.com/v2/resize:fit:1400/0*SsFHqDYhxpECfwCc)
    
 ### 1. 選擇 SAML2.0，點選 Next
